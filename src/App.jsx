@@ -25,21 +25,21 @@ import Tag from "./Tag";
 
 const URLs = {
   boulder1:
-    "/demo-2022-photorealistic-meadow/models/Tundra Boulder_viztbccdw/Tundra Boulder_LOD1__viztbccdw.glb",
+    "/demo-2022-realistic-meadow/models/Tundra Boulder_viztbccdw/Tundra Boulder_LOD1__viztbccdw.glb",
   boulder4:
-    "/demo-2022-photorealistic-meadow/models/Tundra Rocky Ground_vjdraaqmw/Tundra Rocky Ground_LOD1__vjdraaqmw.glb",
+    "/demo-2022-realistic-meadow/models/Tundra Rocky Ground_vjdraaqmw/Tundra Rocky Ground_LOD1__vjdraaqmw.glb",
   ground4:
-    "/demo-2022-photorealistic-meadow/models/Tundra Rocky Ground_vjdragpmw/Tundra Rocky Ground_LOD1__vjdragpmw.glb",
+    "/demo-2022-realistic-meadow/models/Tundra Rocky Ground_vjdragpmw/Tundra Rocky Ground_LOD1__vjdragpmw.glb",
   ground5:
-    "/demo-2022-photorealistic-meadow/models/Tundra Rocky Ground_vjbodahmw/Tundra Rocky Ground_LOD1__vjbodahmw.glb",
+    "/demo-2022-realistic-meadow/models/Tundra Rocky Ground_vjbodahmw/Tundra Rocky Ground_LOD1__vjbodahmw.glb",
   grass1:
-    "/demo-2022-photorealistic-meadow/models/Wild Grass_vlkhcbxia/Wild Grass_LOD1_Var1_vlkhcbxia.glb",
+    "/demo-2022-realistic-meadow/models/Wild Grass_vlkhcbxia/Wild Grass_LOD1_Var1_vlkhcbxia.glb",
   grass3:
-    "/demo-2022-photorealistic-meadow/models/Thatching Grass_uddmcgbia/Thatching Grass_LOD1_Var1_uddmcgbia.glb",
+    "/demo-2022-realistic-meadow/models/Thatching Grass_uddmcgbia/Thatching Grass_LOD1_Var1_uddmcgbia.glb",
   grass4:
-    "/demo-2022-photorealistic-meadow/models/White Everlasting_ucvobbbia/White Everlasting_LOD1_Var1_ucvobbbia.glb",
+    "/demo-2022-realistic-meadow/models/White Everlasting_ucvobbbia/White Everlasting_LOD1_Var1_ucvobbbia.glb",
   rockCluster:
-    "/demo-2022-photorealistic-meadow/models/Mossy Rock Cluster_regsH/Mossy Rock Cluster_LOD1__regsH.glb",
+    "/demo-2022-realistic-meadow/models/Mossy Rock Cluster_regsH/Mossy Rock Cluster_LOD1__regsH.glb",
 };
 
 function Capture() {
@@ -201,7 +201,6 @@ export default function App() {
   return (
     <>
       <Canvas
-        dpr={devicePixelRatio}
         shadows
         gl={{
           // toneMapping: ACESFilmicToneMapping,

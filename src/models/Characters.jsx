@@ -29,7 +29,7 @@ export function Enemy(props) {
 
 const Bee = forwardRef((props, ref) => {
   const { scene, animations } = useGLTF(
-    "/demo-2022-photorealistic-meadow/models/Bee.glb"
+    "/demo-2022-realistic-meadow/models/Bee.glb"
   );
   const cloned = useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { actions } = useAnimations(animations, cloned);
