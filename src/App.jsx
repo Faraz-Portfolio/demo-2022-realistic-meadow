@@ -18,10 +18,8 @@ import { button, Leva, useControls } from "leva";
 import { Suspense } from "react";
 import { Color, MathUtils, Vector3 } from "three";
 import Lights from "./components/Lights";
-import "./index.css";
 import { Grass, Model } from "./models/Boulders";
 import { Bees } from "./models/Characters";
-import Tag from "./Tag";
 
 const URLs = {
   boulder1:
@@ -221,7 +219,7 @@ export default function App() {
         <OrbitControls
           target={[35 / 2, 0, 0]}
           autoRotate
-          autoRotateSpeed={2}
+          autoRotateSpeed={0.5}
           makeDefault
           enablePan={false}
         />
@@ -239,7 +237,6 @@ export default function App() {
       </Canvas>
       <Loader />
       <Leva collapsed titleBar={{ title: "Controls" }} />
-      <Tag />
     </>
   );
 }
