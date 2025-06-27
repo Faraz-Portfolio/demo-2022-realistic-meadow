@@ -15,7 +15,6 @@ import {
   Vignette,
 } from "@react-three/postprocessing";
 import { button, Leva, useControls } from "leva";
-import { Suspense } from "react";
 import { Color, MathUtils, Vector3 } from "three";
 import Lights from "./components/Lights";
 import { Grass, Model } from "./models/Boulders";
@@ -225,10 +224,8 @@ export default function App() {
         />
         <PerspectiveCamera fov={40} position={[25, 15, 25]} makeDefault />
 
-        <Suspense>
-          <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/kloppenheim_04_1k.hdr" />
-          <Thing />
-        </Suspense>
+        <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/kloppenheim_04_1k.hdr" />
+        <Thing />
 
         <Lights />
         <Post />
@@ -236,7 +233,7 @@ export default function App() {
         {/* <Stats /> */}
       </Canvas>
       <Loader />
-      <Leva collapsed titleBar={{ title: "Controls" }} />
+      <Leva collapsed titleBar={{ title: "Options" }} />
     </>
   );
 }
