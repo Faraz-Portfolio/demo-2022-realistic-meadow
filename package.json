@@ -30,6 +30,10 @@
     "vite": "6.3.5"
   },
   "keywords": [],
-  "description": "",
-  "packageManager": "yarn@4.9.2"
+  "description": "Photorealistic Meadow",
+  "packageManager": "yarn@4.9.2",
+  "author": {
+    "name": "Faraz Shaikh",
+    "email": "farazzshaikh@gmail.com"
+  }
 }
