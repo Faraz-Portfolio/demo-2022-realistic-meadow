@@ -20,23 +20,32 @@ import Lights from "./components/Lights";
 import { Grass, Model } from "./models/Boulders";
 import { Bees } from "./models/Characters";
 
+const baseURl = import.meta.env.BASE_URL;
+
 const URLs = {
   boulder1:
-    "/demo-2022-realistic-meadow/models/Tundra Boulder_viztbccdw/Tundra Boulder_LOD1__viztbccdw.glb",
+    baseURl +
+    "models/Tundra Boulder_viztbccdw/Tundra Boulder_LOD1__viztbccdw.glb",
   boulder4:
-    "/demo-2022-realistic-meadow/models/Tundra Rocky Ground_vjdraaqmw/Tundra Rocky Ground_LOD1__vjdraaqmw.glb",
+    baseURl +
+    "models/Tundra Rocky Ground_vjdraaqmw/Tundra Rocky Ground_LOD1__vjdraaqmw.glb",
   ground4:
-    "/demo-2022-realistic-meadow/models/Tundra Rocky Ground_vjdragpmw/Tundra Rocky Ground_LOD1__vjdragpmw.glb",
+    baseURl +
+    "models/Tundra Rocky Ground_vjdragpmw/Tundra Rocky Ground_LOD1__vjdragpmw.glb",
   ground5:
-    "/demo-2022-realistic-meadow/models/Tundra Rocky Ground_vjbodahmw/Tundra Rocky Ground_LOD1__vjbodahmw.glb",
+    baseURl +
+    "models/Tundra Rocky Ground_vjbodahmw/Tundra Rocky Ground_LOD1__vjbodahmw.glb",
   grass1:
-    "/demo-2022-realistic-meadow/models/Wild Grass_vlkhcbxia/Wild Grass_LOD1_Var1_vlkhcbxia.glb",
+    baseURl + "models/Wild Grass_vlkhcbxia/Wild Grass_LOD1_Var1_vlkhcbxia.glb",
   grass3:
-    "/demo-2022-realistic-meadow/models/Thatching Grass_uddmcgbia/Thatching Grass_LOD1_Var1_uddmcgbia.glb",
+    baseURl +
+    "models/Thatching Grass_uddmcgbia/Thatching Grass_LOD1_Var1_uddmcgbia.glb",
   grass4:
-    "/demo-2022-realistic-meadow/models/White Everlasting_ucvobbbia/White Everlasting_LOD1_Var1_ucvobbbia.glb",
+    baseURl +
+    "models/White Everlasting_ucvobbbia/White Everlasting_LOD1_Var1_ucvobbbia.glb",
   rockCluster:
-    "/demo-2022-realistic-meadow/models/Mossy Rock Cluster_regsH/Mossy Rock Cluster_LOD1__regsH.glb",
+    baseURl +
+    "models/Mossy Rock Cluster_regsH/Mossy Rock Cluster_LOD1__regsH.glb",
 };
 
 function Capture() {
@@ -49,7 +58,7 @@ function Capture() {
         "href",
         gl.domElement
           .toDataURL("image/png")
-          .replace("image/png", "image/octet-stream")
+          .replace("image/png", "image/octet-stream"),
       );
       link.click();
     }),
@@ -184,7 +193,7 @@ function Post() {
       {DOF && (
         <DepthOfField
           worldFocusDistance={new Vector3(25, 15, 25).distanceTo(
-            new Vector3(35 / 2, 0, 0)
+            new Vector3(35 / 2, 0, 0),
           )}
           focalLength={0.009}
           bokehScale={3}

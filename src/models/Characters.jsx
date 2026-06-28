@@ -27,10 +27,10 @@ export function Enemy(props) {
   );
 }
 
+const baseURL = import.meta.env.BASE_URL;
+
 const Bee = forwardRef((props, ref) => {
-  const { scene, animations } = useGLTF(
-    "/demo-2022-realistic-meadow/models/Bee.glb"
-  );
+  const { scene, animations } = useGLTF(baseURL + "models/Bee.glb");
   const cloned = useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { actions } = useAnimations(animations, cloned);
 
@@ -50,13 +50,16 @@ const Bee = forwardRef((props, ref) => {
   const release = useRef(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      if (actions?.["_bee_hover"]) {
-        release.current = true;
-        actions["_bee_hover"].timeScale = 10;
-        actions["_bee_hover"].play();
-      }
-    }, MathUtils.randInt(0, 20000));
+    setTimeout(
+      () => {
+        if (actions?.["_bee_hover"]) {
+          release.current = true;
+          actions["_bee_hover"].timeScale = 10;
+          actions["_bee_hover"].play();
+        }
+      },
+      MathUtils.randInt(0, 20000),
+    );
 
     return () => {
       actions?.["_bee_hover"]?.stop().reset();
@@ -95,7 +98,7 @@ export function Bees(props) {
       bee.position.set(
         MathUtils.randFloat(-5, 5), //
         MathUtils.randFloat(-5, 5),
-        MathUtils.randFloat(-5, 5)
+        MathUtils.randFloat(-5, 5),
       );
     });
   }, []);
